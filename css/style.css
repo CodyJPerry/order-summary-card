@@ -7,12 +7,17 @@ CSS Variables ==========
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
+    --active-color: hsl(245, 83%, 68%);
     --base-font: 'Red Hat Display', sans-serif;
 }
 
 /* =====================
 Element Styles ==========
 */
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: var(--base-font);
     font-size: 1rem;
@@ -85,6 +90,7 @@ Layout Styles ==========
     border-radius: 1.25em;
     text-align: center;
     min-width: 20.4375em;
+    max-width: 28.125em;
     box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 15.18%);
 }
 
@@ -136,4 +142,69 @@ Custom Styles ==========
 
 .info-btn {
     color: var(--desaturated-blue);
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+    background: var(--active-color);
+}
+
+.info-btn:hover,
+.info-btn:focus {
+    color: var(--dark-blue);
+}
+
+.pricing-link:hover,
+.pricing-link:focus {
+    color: var(--active-color);
+    text-decoration: none;
+}
+
+/* =====================
+Media Queries ==========
+*/
+/* 480px */
+@media (min-width: 30em) {
+    .container {
+        padding: 4em 0;
+    }
+
+    .component-bg {
+        background: var(--pale-blue) url(../images/pattern-background-desktop.svg) no-repeat;
+        background-size: contain;
+    }
+
+    .component-pricing {
+        margin: 0 3em 2em 3em;
+        padding: 1.5625em;
+    }
+
+    .component-pricing-text {
+        margin-left: 1.125em;
+        margin-top: -0.1875em;
+    }
+
+    .component-text {
+        padding: 0 3em;
+    }
+
+    .component-button-wrapper {
+        padding: 0 2em;
+    }
+
+    .component-title {
+        font-size: 1.75em;
+    }
+
+    .pricing-title,
+    .price {
+        font-size: 1em;
+        padding-bottom: 0.875em;
+        margin-top: 0.25em;
+        line-height: inherit;
+    }
+
+    .pricing-link {
+        font-size: 0.875em;
+    }
 }
