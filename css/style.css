@@ -165,6 +165,12 @@ Media Queries ==========
 */
 /* 480px */
 @media (min-width: 30em) {
+    .container {
+        height: inherit;
+        margin: 0 2em;
+        padding: 3em 0;
+    }
+
     .component-bg {
         background: var(--pale-blue) url(../images/pattern-background-desktop.svg) no-repeat;
         background-size: contain;
@@ -202,5 +208,12 @@ Media Queries ==========
 
     .pricing-link {
         font-size: 0.875em;
+    }
+}
+
+@media (min-height: 50em) {
+    .container {
+        height: 100vh;
+        padding: unset;
     }
 }
