@@ -165,10 +165,6 @@ Media Queries ==========
 */
 /* 480px */
 @media (min-width: 30em) {
-    .container {
-        padding: 4em 0;
-    }
-
     .component-bg {
         background: var(--pale-blue) url(../images/pattern-background-desktop.svg) no-repeat;
         background-size: contain;
