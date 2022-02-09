@@ -160,6 +160,11 @@ Custom Styles ==========
     text-decoration: none;
 }
 
+.component-card:hover, 
+.component-card:focus {
+    box-shadow: 0 40px 40px -20px rgb(13 48 189 / 40%);
+    transition: all 0.5s ease-in;
+
 /* =====================
 Media Queries ==========
 */
