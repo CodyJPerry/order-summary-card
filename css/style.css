@@ -73,13 +73,15 @@ Layout Styles ==========
 .component-bg {
     background: var(--pale-blue) url(../images/pattern-background-mobile.svg) no-repeat;
     background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 0 2em;
 }
 
@@ -210,11 +212,5 @@ Media Queries ==========
 
     .pricing-link {
         font-size: 0.875em;
-    }
-}
-
-@media (min-height: 50em) {
-    .container {
-        padding: unset;
     }
 }
